@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Federico Pierrestegui</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            text-align: center;
+            background-color: #171717;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #9c27b0;
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.5;
+            margin: 0 20px 20px;
+        }
+
+        .head {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #171717;
+            padding: 10px 30px;
+            position: fixed;
+            width: 100%;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .navbar {
+            display: flex;
+            gap: 15px;
+        }
+
+        .navbar a {
+            padding: 10px 15px;
+            font-size: 1rem;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .navbar a:hover {
+            background-color: #3f3f3f;
+            border-radius: 5px;
+        }
+
+        .header {
+            height: 100vh;
+            background: url('img/header.jpg') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 20px;
+            position: relative;
+        }
+
+        .welcome-section {
+            background-color: #171717;
+            padding-top: 80px;
+            padding-bottom: 40px;
+        }
+
+        .welcome-text {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #9c27b0;
+        }
+
+        .section {
+            padding: 60px 20px;
+        }
+
+        .sau {
+            background-color: #1f1d1d;
+        }
+
+        .about {
+            background-color: #171717;
+        }
+
+        .projects {
+            background-color: #171717;
+        }
+
+        .picture {
+            height: 50vh;
+            background: url('img/costos.jpg') no-repeat center center/cover;
+            background-attachment: fixed;
+        }
+
+        .box-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .box {
+            background-color: #101010;
+            width: 300px;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .box h3 {
+            color: #9c27b0;
+            margin: 15px 0;
+        }
+
+        .lastwords {
+            background-color: #171717;
+            padding-bottom: 40px;
+        }
+
+        .cat img {
+            width: 100%;
+            height: auto;
+            max-height: none;
+            object-fit: contain;
+            border-radius: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .box-container {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="head">
+        <nav class="navbar">
+            <a onclick="scrollToSection('welcome-section')">Welcome</a>
+            <a onclick="scrollToSection('about')">About Me</a>
+            <a onclick="scrollToSection('projects')">Projects</a> 
+            <a onclick="scrollToSection('sau')">Hobbies</a>
+            <a onclick="scrollToSection('lastwords')">Last Words</a>
+        </nav>
+    </div>
+
+    <div class="welcome-section" id="welcome-section">
+        <div class="welcome-text">
+           Hello and welcome to my personal page!
+        </div>
+    </div>
+
+    <header class="header" id="header"></header>
+
+    <section class="section about" id="about">
+        <h2 class="title">About Me</h2>
+        <p>I'm Federico from Córdoba, Argentina, and I'm currently pursuing a Technical Degree in Software Development. 
+            I consider myself an easy-going person, open to listening to new ideas and different perspectives and ways to see things. 
+            I love challenges and putting my abilities to the test, keen to explore and expand my limits. 
+            I enjoy learning and creating new things daily, and I strive to grow both as a professional and as a person every day, always embracing change as a constant. 
+            I thrive in environments that are inspiring, and I'm constantly looking for ways to shape my life toward fulfillment.
+        </p>
+    </section>
+
+    <!-- New Section for Projects -->
+    <section class="section projects" id="projects">
+        <h2 class="title">My Projects</h2>
+        <p>Here are a few of the projects I've previously worked on:</p>
+        <div class="box-container">
+            <div class="box">
+                <h3>"PipiCucu Food"</h3>
+                <p>It was my first project working as part of a team on an emulation project. Initially, it was meant to be a ten-person team with different roles, but in the end, we were just three people covering all the roles.
+                    As a first-year student, I had little experience, but I pushed forward, helping to build an MVP that we presented at "Demo Day" alongside 20+ teams. 
+                    It was nerve-wracking, but I learned a lot about agile methodologies, teamwork, Spring Boot, MVC, and other concepts that the following year I encountered in subjects like System Analysis II and Web Applications.
+                    The project was about a web app for food delivery (for restaurant owners and customers).
+                </p>
+            </div>
+            <div class="box">
+                <h3>"Sales Management"</h3>
+                <p>Later on, I took an online course about SpringBoot to enhance and solidify my knowledge and concepts, and made a sales management web app. 
+                    I developed a RESTful web page that implemented full CRUD operations (Create, Read, Update, Delete) using Spring Boot. This application allowed users to load, modify, and delete resources through RESTful APIs. 
+                    Additionally, I created the front-end of the page using HTML, CSS, and JavaScript to consume these APIs, ensuring a seamless interaction between the client and the server.
+                </p>
+            </div>
+            <div class="box">
+                <h3>"Library Management"</h3>
+                <p>I also created a library management application, which allowed performing CRUD operations on books. This time, the project was a console-based application using SQLite as the database. I implemented design patterns such as Dependency Injection, Single Responsibility, and the DAO (Data Access Object) pattern to ensure scalability and maintainability. 
+                    Additionally, I used JUnit to write unit tests and ensure the application's functionality and stability.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section sau" id="sau">
+        <h2 class="title">Hobbies</h2>
+        <p>Here are the things I like to do in my free time:</p>
+        <div class="box-container">
+            <div class="box">
+                <h3>Playing Chess</h3>
+                <p>It helps me develop strategic thinking, sharpen my mind, and blend logic and creativity.
+                     Additionally, it teaches me how to deal with defeat and respect my opponent.</p>
+            </div>
+            <div class="box">
+                <h3>Playing Music</h3>
+                <p>I love music. I play guitar.</p>
+            </div>
+            <div class="box">
+                <h3>Mountain Biking</h3>
+                <p>It keeps both my mind and body healthy, and it also gives me a sense of camaraderie with the people I ride with.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section picture" id="picture"></section>
+
+    <section class="section lastwords" id="lastwords">
+        <h2 class="title">Last Words</h2>
+        <p>If you made it this far, thank you for your time and attention. Alma and Milo wish you a great day (I've been blessed with the cat distribution system :3)</p>
+        <figure class="cat">
+            <img src="img/cat.jpg" alt="Alma and Milo, my cats">
+        </figure>
+    </section>
+
+    <script>
+        function scrollToSection(id) {
+            const section = document.getElementById(id);
+            window.scrollTo({
+                top: section.offsetTop - 70, 
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
+</html>
